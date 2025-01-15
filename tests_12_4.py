@@ -13,7 +13,7 @@ class RunnerTest(unittest.TestCase):
             test_w = Runner('Вася', -5)
             test_w.walk()
             self.assertTrue(test_w.distance < 101)
-            logging.info(f"test_walk выполнен успешно")
+            logging.info("'test_walk' выполнен успешно")
         except ValueError as err:
             logging.error(err)
             logging.warning("Неверная скорость для Runner")
@@ -22,7 +22,7 @@ class RunnerTest(unittest.TestCase):
         try:
             test_r = Runner(256, 5)
             test_r.run()
-            logging.info(f"test_run выполнен успешно")
+            logging.info("'test_run' выполнен успешно")
             self.assertTrue(test_r.distance > 101)
         except TypeError as err:
             logging.error(err)
